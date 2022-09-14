@@ -16,12 +16,21 @@ import EventosComponente from './components/eventos/EventosComponente';
 import FormularioBasicoComponente from './components/formularios/FormularioBasicoComponente';
 import FormularioBasicoComponenteSinRef from './components/formularios/FormularioBasicoComponenteCreateRef';
 import FormLogin from './components/formularios/FormLogin';
+import LoginFormValidationComponente from './components/formularios/LoginFormValidationComponente';
+import CochesComponente from './components/coches/CochesComponente';
+import ClientesComponente from './components/clientes/ClientesComponente';
 
 function App() {
   return (
     <div className="App">
       <Cabecera />
       <Menu />
+      <CochesComponente />
+      <ClientesComponente />
+      {/** Codigo comentado dentro de braces
+      <MiComponente />
+      <Jedi />
+      <Sith />
       <ContenidoPaginaPrincipal />
       <FichaCliente />
       <Envio />
@@ -29,14 +38,12 @@ function App() {
       <FormularioLogin />
       <FichaEmpleado />
       <EventosComponente />
-      {/** Codigo comentado dentro de braces
-      <MiComponente />
-      <Jedi />
-      <Sith />
     */}
+    
     <FormularioBasicoComponente />
     <FormularioBasicoComponenteSinRef />
     <FormLogin />
+    <LoginFormValidationComponente />
       <PiePagina />
     </div>
   );
