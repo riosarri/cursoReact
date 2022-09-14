@@ -19,12 +19,26 @@ import FormLogin from './components/formularios/FormLogin';
 import LoginFormValidationComponente from './components/formularios/LoginFormValidationComponente';
 import CochesComponente from './components/coches/CochesComponente';
 import ClientesComponente from './components/clientes/ClientesComponente';
+import { Link, Route, Routes } from "react-router-dom";
+import { About, Home, NotFound } from "./components/rutas/Pages";
+import Navega from "./components/rutas/Navega";
+import Listado from "./components/rutas/Listado";
+import Detalle from "./components/rutas/Detalle";
 
 function App() {
   return (
     <div className="App">
       <Cabecera />
       <Menu />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="about" element={<About />} />
+        <Route path="navega" element={<Navega />} />
+        <Route path="listado" element={<Listado />} />
+        <Route path="listado/:id" element={<Detalle />} />
+        <Route path="coches" element={<CochesComponente />} />
+
+      </Routes>
       <CochesComponente />
       <ClientesComponente />
       {/** Codigo comentado dentro de braces
@@ -39,12 +53,13 @@ function App() {
       <FichaEmpleado />
       <EventosComponente />
     */}
-    
-    <FormularioBasicoComponente />
-    <FormularioBasicoComponenteSinRef />
-    <FormLogin />
-    <LoginFormValidationComponente />
+
+      <FormularioBasicoComponente />
+      <FormularioBasicoComponenteSinRef />
+      <FormLogin />
+      <LoginFormValidationComponente />
       <PiePagina />
+
     </div>
   );
 }
